@@ -19,6 +19,7 @@ document.getElementById("chords").innerHTML = chordCombo;
 
 
 //........................Functions...............................
+//random number generator
 function randNum(start, end) {
-    return Math.floor((Math.random()*(end+start))+start)
+    return Math.floor((Math.random()*(end-start+1))+start)
 }
