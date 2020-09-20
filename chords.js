@@ -5,13 +5,18 @@ const minorChords = ['Am', 'Bm', 'Cm', 'Dm', 'Em', 'Fm', 'Gm'];
 
 //.......................Defining variables..........................
 let chordCombo = "";
-let randIndex;
+
 
 //.......................Looping to get combo........................
 for(let i = 0; i < majorChords.length; i++) {
-    //randIndex = Math.floor(Math.random()*7);
-    randIndex = randNum(0,7)
-    chordCombo = chordCombo + majorChords[randIndex] + " ";
+
+    let k = randNum(0,1);
+    if(k === 0) {
+        chordCombo = chordCombo + majorChords[randNum(0, 6)] + " ";
+    } else {
+        chordCombo = chordCombo + minorChords[randNum(0, 6)] + " ";
+    }
+
 }
 
 //.......................Output.......................................
@@ -19,7 +24,7 @@ document.getElementById("chords").innerHTML = chordCombo;
 
 
 //........................Functions...............................
-//random number generator
+//random number generator (start and end inclusive)
 function randNum(start, end) {
     return Math.floor((Math.random()*(end-start+1))+start)
 }
