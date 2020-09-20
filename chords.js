@@ -5,9 +5,10 @@ const minorChords = ['Am', 'Bm', 'Cm', 'Dm', 'Em', 'Fm', 'Gm'];
 
 //.......................Defining variables..........................
 let chordCombo = "";
+let numOfChords = document.getElementById("chordNumber").value
+document.getElementById("testing").innerHTML = numOfChords
 
-
-//.......................Looping to get combo........................
+//.......................Chord generator........................
 for(let i = 0; i < majorChords.length; i++) {
 
     let k = randNum(0,1);
